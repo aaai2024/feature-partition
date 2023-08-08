@@ -1,0 +1,16 @@
+---
+  dataset: "ames"
+  is_regression: True
+  random_feat_split: True
+  bound_dist: [15]
+  is_bound_percent: True
+  forward_batch_size: 4096
+  # Ensemble parameters
+  alt_type: "huber"
+  n_disjoint_models: 21
+  ssl_degree: 1
+  # Huber regression params
+  model_params:
+    alpha: 4.51E-5
+    max_iter: 1E8
+    tol: 1e-08

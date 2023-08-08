@@ -1,0 +1,19 @@
+---
+  dataset: "cifar10"
+  is_classification: True
+  top_k_vals: []
+  random_feat_split: False
+  walking_feat_split: True
+  forward_batch_size: 512
+  # Ensemble parameters
+  alt_type: "nn"
+  n_disjoint_models: 160
+  ssl_degree: 1
+  validation_split_ratio: 0
+  # Learner parameters
+  num_epoch: 80
+  learning_rate: 4E-1
+  weight_decay: 5E-4
+  batch_size: 512
+  model_params:
+    optim: sgd

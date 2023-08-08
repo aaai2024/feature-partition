@@ -1,0 +1,24 @@
+---
+  dataset: "weather"
+  is_regression: True
+  random_feat_split: True
+  bound_dist: [3]
+  is_bound_percent: False
+  forward_batch_size: 4096
+  # Ensemble parameters
+  alt_type: "lgbm"
+  n_disjoint_models: 1
+  ssl_degree: 1
+  # LightGBM params
+  model_params:
+    boosting_type: "gbdt"
+    n_estimators: 500
+    max_depth: 10
+    num_leaves: 127
+    objective: "huber"
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    learning_rate: 0.5
+    subsample: 0.9
+    colsample_bytree: 0.9
+    verbose: -1

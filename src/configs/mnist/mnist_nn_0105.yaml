@@ -1,0 +1,19 @@
+---
+  dataset: "mnist"
+  is_classification: True
+  top_k_vals: []
+  random_feat_split: False
+  walking_feat_split: True
+  forward_batch_size: 128
+  # Ensemble parameters
+  alt_type: "nn"
+  n_disjoint_models: 105
+  ssl_degree: 1
+  # Lasso params
+  model_params:
+    optim: adamw
+    n_layers: 3
+    wd: 1.00E-3
+    lr: 3.16E-4
+    n_epoch: 25
+    bs: 128

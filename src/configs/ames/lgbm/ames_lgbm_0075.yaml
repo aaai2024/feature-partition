@@ -1,0 +1,27 @@
+---
+  dataset: "ames"
+  is_regression: True
+  random_feat_split: True
+  bound_dist: [15]
+  is_bound_percent: True
+  forward_batch_size: 4096
+  # Ensemble parameters
+  alt_type: "lgbm"
+  n_disjoint_models: 75
+  ssl_degree: 1
+  # LightGBM params
+  model_params:
+    boosting_type: "gbdt"
+    n_estimators: 1000
+    min_child_samples: 5
+    max_depth: 6
+    num_leaves: 127
+    objective: "mae"
+    reg_alpha: 1E-3
+    reg_lambda: 1E2
+    learning_rate: 1E-2
+    random_state: 42
+    subsample: 0.9
+    colsample_bytree: 0.8
+    subsample_freq: 1
+    verbose: -1
